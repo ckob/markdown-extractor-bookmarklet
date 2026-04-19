@@ -30,6 +30,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B build
           git add -f dist/
           git commit -m "chore: update compiled bookmarklets [skip ci]" || echo "No changes to commit"
-          git push
+          git push origin build -f

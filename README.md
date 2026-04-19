@@ -1,6 +1,6 @@
-# markdown-extractor-bookmarklet
+# Markdown Extractor Local Bookmarklet
 
-Extract clean Markdown from any article on the web using a simple browser bookmarklet.
+Extract clean Markdown from any article on the web using a simple browser bookmarklet. **Everything runs entirely locally in your browser**—no server calls, no external APIs, ensuring complete privacy for your reading data.
 
 ## What it does
 
@@ -39,6 +39,7 @@ The project builds two different versions of the bookmarklet to suit your needs:
 
 ## Development
 
+- `src/core.js`: Core extraction and UI logic.
 - `src/bundled.js`: Source code for the bundled version.
 - `src/cdn.js`: Source code for the CDN version.
 - `build-urls.js`: Utility script that reads the minified output and safely encodes it into `javascript:` URLs.
