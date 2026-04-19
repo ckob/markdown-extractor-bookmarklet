@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Extract clean Markdown from any article.",
   "scripts": {
-    "build": "npm run build:cdn && npm run build:bundled",
+    "build": "npm run build:cdn && npm run build:bundled && node build-urls.js",
     "build:cdn": "npx terser src/cdn.js -c -m -o dist/bookmarklet-cdn.min.js",
     "build:bundled": "npx esbuild src/bundled.js --bundle --minify --format=iife --outfile=dist/bookmarklet-bundled.min.js"
   },
