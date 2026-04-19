@@ -1,0 +1,21 @@
+{
+  "name": "to-markdown-local-bookmarklet",
+  "version": "0.0.0",
+  "description": "Extract clean Markdown from any article.",
+  "scripts": {
+    "build": "npm run build:cdn && npm run build:bundled",
+    "build:cdn": "npx terser src/cdn.js -c -m -o dist/bookmarklet-cdn.min.js",
+    "build:bundled": "npx esbuild src/bundled.js --bundle --minify --format=iife --outfile=dist/bookmarklet-bundled.min.js"
+  },
+  "author": "ckob",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "terser": "^5.30.0"
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.5.0",
+    "marked": "^12.0.0",
+    "turndown": "^7.1.3"
+  }
+}
