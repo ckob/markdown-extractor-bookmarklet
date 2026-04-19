@@ -34,3 +34,8 @@ jobs:
           git add -f dist/
           git commit -m "chore: update compiled bookmarklets [skip ci]" || echo "No changes to commit"
           git push origin build -f
+
+      - name: Purge jsDelivr Cache
+        run: |
+          curl -s https://purge.jsdelivr.net/gh/ckob/markdown-extractor-bookmarklet@build/dist/bookmarklet-cdn.min.js
+          curl -s https://purge.jsdelivr.net/gh/ckob/markdown-extractor-bookmarklet@build/dist/bookmarklet-bundled.min.js

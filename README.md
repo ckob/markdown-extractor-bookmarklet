@@ -29,6 +29,11 @@ The project builds two different versions of the bookmarklet to suit your needs:
 
 ## How to use
 
+### Easy Install (Recommended)
+Visit the **[Installation Page](https://ckob.dev/markdown-extractor-bookmarklet)** to simply drag and drop the bookmarklet directly into your browser's bookmarks bar!
+
+### Manual Build
+If you prefer to build it yourself from source:
 1. Run `npm install` to install the dependencies.
 2. Run `npm run build` to generate the minified bookmarklets.
 3. The build script will generate ready-to-use bookmarklet URLs in the `dist/` directory:
